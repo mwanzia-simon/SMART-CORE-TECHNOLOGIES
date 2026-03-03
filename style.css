@@ -156,7 +156,11 @@ nav ul li a:hover {
 
 /* About us section */
 .about-us {
+  width: 90%;
+  margin: 0 auto;
   padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px 0px var(--border-color);
 }
 .about-us h3 {
   font-size: 22px;
@@ -165,11 +169,11 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   padding: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.about-us .col-1 p{
-    text-align: justify;
-    color: var(--text-primary);
+.about-us .col-1 p {
+  text-align: justify;
+  color: var(--text-primary);
 }
 .col-1 {
   flex-basis: 50%;
@@ -197,7 +201,7 @@ nav ul li a:hover {
     flex-direction: column;
   }
   /* style the nav bar */
-  nav{
+  nav {
     display: none;
   }
 }
