@@ -108,6 +108,8 @@ nav ul li a:hover {
 
 /* Featured products */
 .featured-products {
+  width: 90%;
+  margin: 0 auto;
   padding: 10px 10px;
   background-color: blue;
 }
@@ -129,6 +131,7 @@ nav ul li a:hover {
   background:
     linear-gradient(rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.7)),
     url("images/discount.jpg");
+  object-fit: cover;
   background-size: cover;
   backdrop-filter: blur(10px);
   background-position: center;
@@ -142,6 +145,8 @@ nav ul li a:hover {
   flex-direction: column;
 }
 .offer-content h2 {
+    font-size: 25px;
+    font-weight: 700;
   text-transform: uppercase;
 }
 .offer-content a {
