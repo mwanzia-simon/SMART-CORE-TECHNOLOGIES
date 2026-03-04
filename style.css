@@ -21,6 +21,7 @@ body {
   background-color: var(--bg-main);
   color: var(--text-primary);
   font-family: "Segoe UI", sans-serif;
+  margin: 0;
 }
 /* styling the container div */
 .container {
@@ -127,9 +128,9 @@ nav ul li a:hover {
   background: var(--bg-card);
   background:
     linear-gradient(rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.7)),
-    url("images/hero.jpg");
+    url("images/discount.jpg");
   background-size: cover;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(10px);
   background-position: center;
 }
 
@@ -160,7 +161,7 @@ nav ul li a:hover {
   margin: 0 auto;
   padding: 10px 10px;
   border-radius: 10px;
-  background:var(--bg-card)
+  background: var(--bg-card);
 }
 .about-us h3 {
   font-size: 22px;
@@ -193,9 +194,9 @@ nav ul li a:hover {
   margin: 30px auto;
   padding: 10px 10px;
 }
-.testimonials h3{
-    text-align: center;
-    font-size: 25px;
+.testimonials h3 {
+  text-align: center;
+  font-size: 25px;
 }
 
 .testimonial-container {
@@ -258,7 +259,7 @@ nav ul li a:hover {
   outline: none;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
-   box-shadow: 0 4px 12px var(--border-color);
+  box-shadow: 0 4px 12px var(--border-color);
 }
 .newsletter .email-container button {
   width: 35%;
@@ -272,7 +273,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 12px var(--border-color);
 }
 .newsletter .email-container button:hover {
-    background: var(--accent-hover);
+  background: var(--accent-hover);
 }
 
 /* Footer */
@@ -284,7 +285,7 @@ footer {
   justify-content: center;
   font-family: sans-serif;
   margin: 0 auto;
-  background: var(--accent-orange);
+  background: var(--bg-hover);
 }
 footer hr {
   width: 90%;
@@ -293,6 +294,7 @@ footer hr {
   background-color: #fff;
 }
 footer .row {
+  width: 80%;
   padding: 20px;
 }
 footer .row .card {
@@ -327,9 +329,6 @@ footer .row .quick-links ul a {
   text-decoration: none;
   color: #fff;
 }
-
-
-
 
 /* Media query */
 @media (max-width: 768px) {
