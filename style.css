@@ -150,6 +150,16 @@ nav ul li a:hover {
   text-align: center;
   color: var(--text-muted);
 }
+.product .ratings{
+  text-align: center;
+}
+.product .ratings i{
+  font-size: 12px;
+}
+
+.product .ratings .fa-solid{
+  color: #ffca2b;
+}
 .product .product-price{
   text-align: center;
   font-size: 18px;
