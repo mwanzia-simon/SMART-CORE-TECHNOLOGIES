@@ -68,6 +68,22 @@ body {
   font-size: 20px;
   color: var(--text-primary);
 }
+.navbar label {
+  display: none;
+}
+.navbar #sidebar-active:checked ~ nav {
+  right: 0%;
+}
+.navbar #sidebar-active:checked ~ #overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .container .logo-container h2 {
   color: var(--text-secondary);
 }
@@ -550,8 +566,7 @@ footer .row .quick-links ul a {
   }
   /* style the nav bar */
   nav {
-    display: none;
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -559,13 +574,23 @@ footer .row .quick-links ul a {
     width: 40%;
     height: 100vh;
     top: 0;
-    right: 0;
+    right: -100%;
     z-index: 10;
-    background:var(--bg-card); */
+    background: var(--bg-card);
+    transition: all 0.3s ease-in-out;
+  }
+  nav label {
+    position: absolute;
+    padding: 10px;
+    right: 50px;
+    top: 50px;
   }
   nav ul {
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+  .navbar label {
+    display: block;
   }
 }
