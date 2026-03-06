@@ -15,7 +15,7 @@ async function loadProducts(){
     data.forEach(product => {
         productsContainer.innerHTML += `
         <div class="product">
-          <div class="saved-amount">saved Ksh 129,500.00</div>
+          <div class="saved-amount">saved Ksh ${(product.savedAmount).toLocaleString()}.00</div>
           <img
             src="${product.imageURL}"
             alt="product"
