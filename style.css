@@ -22,7 +22,35 @@ body {
   color: var(--text-primary);
   font-family: "Segoe UI", sans-serif;
   margin: 0;
+  position: relative;
 }
+
+/* whatapp bubble */
+.whatapp {
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #26d466;
+  text-decoration: none;
+  border-radius: 50%;
+  position: fixed;
+  right: 10px;
+  bottom: 10%;
+  z-index: 2;
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.whatapp i {
+  font-size: 25px;
+}
+.whatapp:hover {
+  opacity: 0.6;
+  scale: 1.1;
+}
+
 /* styling the container div */
 .container {
   padding: 30px 20px;
@@ -514,6 +542,21 @@ footer .row .quick-links ul a {
   }
   /* style the nav bar */
   nav {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+    width: 40%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    background:var(--bg-card);
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }

@@ -112,18 +112,18 @@
     }
   },
   {
-    "productID": "SCT005",
-    "imageURL": "images/zephyrus-01.png",
-    "productName": "ROG Zephyrus G16 (2025)",
-    "savedAmount": 4000,
-    "currentPrice": 41400,
+    "productID": "SCT008",
+    "imageURL": "images/hp-01.png",
+    "productName": "HP Spectre x360 2-in-1",
+    "savedAmount": 2800,
+    "currentPrice": 12000,
     "specs": {
-      "processor": "Intel Core Ultra 9 285H",
-      "ai_processor": "Intel AI Boost NPU up to 13TOPS",
-      "graphics": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
-      "display": "16-inch 2.5K WQXGA OLED ROG Nebula Display",
-      "ram": "32GB",
-      "storage": "1TB SSD",
+      "processor": "Intel Core i5-1235U",
+      "ai_processor": "None",
+      "graphics": "Intel Iris Xe Graphics",
+      "display": "13.5-inch WUXGA+ Touchscreen",
+      "ram": "8GB LPDDR4x",
+      "storage": "512GB PCIe Gen4 SSD",
       "operating_system": "Windows 11 Home"
     }
   }
