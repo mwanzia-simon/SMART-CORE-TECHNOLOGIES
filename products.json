@@ -1,0 +1,66 @@
+[
+  {
+    "productID": "SCT001",
+    "imageURL": "images/asus-01.png",
+    "productName": "ASUS Zenbook Duo (2025)",
+    "savedAmount": 129500,
+    "currentPrice": 290500,
+    "specs": {
+      "processor": "Intel Core Ultra 9 285H",
+      "ai_processor": "Intel AI Boost NPU",
+      "graphics": "Intel Arc Graphics",
+      "display": "Dual 14-inch 3K OLED Touch Displays",
+      "ram": "32GB",
+      "storage": "2TB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT002",
+    "imageURL": "images/asus-02.png",
+    "productName": "ASUS Zenbook A14 OLED",
+    "savedAmount": 32000,
+    "currentPrice": 160000,
+    "specs": {
+      "processor": "Qualcomm Snapdragon X X1 26-100",
+      "ai_processor": "Qualcomm Hexagon NPU up to 45TOPS",
+      "graphics": "Integrated",
+      "display": "14-inch WUXGA OLED",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT003",
+    "imageURL": "images/asus-03.png",
+    "productName": "ASUS ZenBook 14",
+    "savedAmount": 32000,
+    "currentPrice": 153000,
+    "specs": {
+      "processor": "AMD Ryzen AI 7 350",
+      "ai_processor": "Integrated AI features",
+      "graphics": "AMD Radeon Graphics",
+      "display": "14-inch 3K OLED 120Hz",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT004",
+    "imageURL": "images/asus-04.png",
+    "productName": "ASUS Zenbook 14 OLED",
+    "savedAmount": 50000,
+    "currentPrice": 195000,
+    "specs": {
+      "processor": "Intel Core Ultra 9 285H",
+      "ai_processor": "Intel AI Boost NPU",
+      "graphics": "Intel Arc Graphics",
+      "display": "14-inch 3K OLED Touch Display",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  }
+]
