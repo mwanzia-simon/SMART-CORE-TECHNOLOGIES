@@ -136,6 +136,8 @@ nav ul li a:hover {
 .products-container .product img {
   margin: 0 auto;
   width: 100%;
+  height: 200px;
+  object-fit: contain;
 }
 .products-container .product .saved-amount {
   position: absolute;
@@ -371,6 +373,7 @@ nav ul li a:hover {
   background: var(--bg-card);
   border-radius: 5px;
   outline: none;
+  font-family: sans-serif;
   color: var(--text-primary);
   transition: all 0.3s;
 }

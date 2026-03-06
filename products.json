@@ -3,8 +3,8 @@
     "productID": "SCT001",
     "imageURL": "images/asus-01.png",
     "productName": "ASUS Zenbook Duo (2025)",
-    "savedAmount": 129500,
-    "currentPrice": 290500,
+    "savedAmount": 1295,
+    "currentPrice": 29050,
     "specs": {
       "processor": "Intel Core Ultra 9 285H",
       "ai_processor": "Intel AI Boost NPU",
@@ -19,8 +19,8 @@
     "productID": "SCT002",
     "imageURL": "images/asus-02.png",
     "productName": "ASUS Zenbook A14 OLED",
-    "savedAmount": 32000,
-    "currentPrice": 160000,
+    "savedAmount": 3200,
+    "currentPrice": 16000,
     "specs": {
       "processor": "Qualcomm Snapdragon X X1 26-100",
       "ai_processor": "Qualcomm Hexagon NPU up to 45TOPS",
@@ -35,8 +35,8 @@
     "productID": "SCT003",
     "imageURL": "images/asus-03.png",
     "productName": "ASUS ZenBook 14",
-    "savedAmount": 32000,
-    "currentPrice": 153000,
+    "savedAmount": 3200,
+    "currentPrice": 15300,
     "specs": {
       "processor": "AMD Ryzen AI 7 350",
       "ai_processor": "Integrated AI features",
@@ -51,14 +51,78 @@
     "productID": "SCT004",
     "imageURL": "images/asus-04.png",
     "productName": "ASUS Zenbook 14 OLED",
-    "savedAmount": 50000,
-    "currentPrice": 195000,
+    "savedAmount": 5000,
+    "currentPrice": 19500,
     "specs": {
       "processor": "Intel Core Ultra 9 285H",
       "ai_processor": "Intel AI Boost NPU",
       "graphics": "Intel Arc Graphics",
       "display": "14-inch 3K OLED Touch Display",
       "ram": "16GB",
+      "storage": "1TB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT005",
+    "imageURL": "images/zephyrus-01.png",
+    "productName": "ROG Zephyrus G16 (2025)",
+    "savedAmount": 4000,
+    "currentPrice": 41400,
+    "specs": {
+      "processor": "Intel Core Ultra 9 285H",
+      "ai_processor": "Intel AI Boost NPU up to 13TOPS",
+      "graphics": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "display": "16-inch 2.5K WQXGA OLED ROG Nebula Display",
+      "ram": "32GB",
+      "storage": "1TB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT006",
+    "imageURL": "images/lenovo-01.png",
+    "productName": "Lenovo Legion 5",
+    "savedAmount": 6000,
+    "currentPrice": 22000,
+    "specs": {
+      "processor": "Intel Core i7-14650HX",
+      "ai_processor": "None",
+      "graphics": "NVIDIA GeForce RTX 4060 8GB",
+      "display": "16-inch WQXGA 165Hz",
+      "ram": "16GB",
+      "storage": "1TB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT007",
+    "imageURL": "images/lenovo-02.png",
+    "productName": "Lenovo LOQ 15IRH8",
+    "savedAmount": 5000,
+    "currentPrice": 19500,
+    "specs": {
+      "processor": "Intel Core i7-13620H",
+      "ai_processor": "None",
+      "graphics": "NVIDIA GeForce RTX 4050 6GB",
+      "display": "15.6-inch FHD 144Hz",
+      "ram": "16GB",
+      "storage": "512GB SSD",
+      "operating_system": "Windows 11 Home"
+    }
+  },
+  {
+    "productID": "SCT005",
+    "imageURL": "images/zephyrus-01.png",
+    "productName": "ROG Zephyrus G16 (2025)",
+    "savedAmount": 4000,
+    "currentPrice": 41400,
+    "specs": {
+      "processor": "Intel Core Ultra 9 285H",
+      "ai_processor": "Intel AI Boost NPU up to 13TOPS",
+      "graphics": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "display": "16-inch 2.5K WQXGA OLED ROG Nebula Display",
+      "ram": "32GB",
       "storage": "1TB SSD",
       "operating_system": "Windows 11 Home"
     }
