@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartCore | Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo-container">
+          <h2>SmartCore</h2>
+        </div>
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" id="overlay"></label>
+        <nav>
+          <ul>
+            <label for="sidebar-active">
+              <i class="fa-solid fa-x"></i>
+            </label>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products-section">Shop</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="index.html#contactus-section">Contact Us</a></li>
+            <li>
+              <div class="cart-container" onclick="location.href = '#'">
+                <p id="number-of-items">0</p>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <label for="sidebar-active">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </label>
+      </div>
+
+      <!-- Cart container-01 -->
+      <div class="cart-container-01">
+        <h3>Your Cart</h3>
+        <div class="cart">
+          <div class="cart-item">
+            <img src="/images/asus-01.png" alt="img" />
+            <div class="cart-item-info">
+              <h3 class="cart-item-name">ASUS Zenbook Duo (2025)</h3>
+              <p class="cart-item-price">ksh 19,000.00</p>
+              <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <p class="cart-item-quantity">1</p>
+                <button class="increment">+</button>
+              </div>
+            </div>
+
+            <div class="remove-cart-item">
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="/images/asus-02.png" alt="img" />
+            <div class="cart-item-info">
+              <h3 class="cart-item-name">ASUS Zenbook Duo (2025)</h3>
+              <p class="cart-item-price">ksh 19,000.00</p>
+              <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <p class="cart-item-quantity">1</p>
+                <button class="increment">+</button>
+              </div>
+            </div>
+
+            <div class="remove-cart-item">
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="/images/asus-03.png" alt="img" />
+            <div class="cart-item-info">
+              <h3 class="cart-item-name">ASUS Zenbook Duo (2025)</h3>
+              <p class="cart-item-price">ksh 19,000.00</p>
+              <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <p class="cart-item-quantity">1</p>
+                <button class="increment">+</button>
+              </div>
+            </div>
+
+            <div class="remove-cart-item">
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="JS/cart.js"></script>
+  </body>
+</html>
