@@ -17,6 +17,9 @@
   /* Borders */
   --border-color: #334155;
 }
+::-webkit-scrollbar{
+  width: 0;
+}
 body {
   background-color: var(--bg-main);
   color: var(--text-primary);
@@ -59,6 +62,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10000;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 0px 1px 0px;
 }
 .navbar input {
   display: none;
@@ -300,9 +315,7 @@ nav ul li a:hover {
   border-radius: 10px;
   background: var(--bg-card);
 }
-.about-us h3 {
-  font-size: 22px;
-}
+
 .row {
   display: flex;
   align-items: center;
@@ -313,6 +326,11 @@ nav ul li a:hover {
   text-align: justify;
   color: var(--text-primary);
 }
+.about-us .col-1 h2{
+  font-size: 35px;
+
+}
+
 .col-1 {
   flex-basis: 50%;
   padding: 10px;
@@ -571,19 +589,20 @@ footer .row .quick-links ul a {
     justify-content: center;
     position: absolute;
     padding: 10px;
-    width: 40%;
-    height: 100vh;
+    width: 50%;
+    height: 50vh;
     top: 0;
     right: -100%;
     z-index: 10;
     background: var(--bg-card);
     transition: all 0.3s ease-in-out;
+    border-bottom-left-radius: 20px;
   }
   nav label {
     position: absolute;
     padding: 10px;
-    right: 50px;
-    top: 50px;
+    right: 20px;
+    top: 20px;
   }
   nav ul {
     display: flex;
