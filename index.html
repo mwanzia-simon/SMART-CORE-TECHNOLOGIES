@@ -21,9 +21,9 @@
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#products-section">Shop</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#contactus-section">Contact Us</a></li>
             <li>
               <div class="cart-container">
                 <p id="number-of-items">0</p>
@@ -41,81 +41,17 @@
           <p>
             Discover high-performance laptops built for creators and developers.
           </p>
-          <button class="btn-primary"><a href="#">Shop Now</a></button>
+          <button class="btn-primary">
+            <a href="#products-section">Shop Now</a>
+          </button>
         </div>
       </section>
     </div>
 
     <!-- Featured products section -->
-    <section class="featured-products">
+    <section class="featured-products" id="products-section">
       <h3>Featured Products</h3>
-      <div class="products-container">
-        
-        <div class="product">
-          <div class="saved-amount">saved Ksh 129,500.00</div>
-          <img
-            src="https://laptopclinic.co.ke/cdn/shop/files/UX8406_IN_STOCK.png"
-            alt="product"
-          />
-          <p class="product-name">ASUS Zenbook Duo UX8406CA-PZ005W</p>
-          <div class="ratings">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <h3 class="product-price">Ksh 290,500.00</h3>
-          <s class="old-price">ksh 420,000.00</s>
-          <div class="buttons-container">
-            <button class="add-to-cart">Add to cart</button>
-            <button class="quick-overview">Quick overview</button>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="saved-amount">saved Ksh 129,500.00</div>
-          <img
-            src="https://laptopclinic.co.ke/cdn/shop/files/UX8406_IN_STOCK.png"
-            alt="product"
-          />
-          <p class="product-name">ASUS Zenbook Duo UX8406CA-PZ005W</p>
-          <div class="ratings">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <h3 class="product-price">Ksh 290,500.00</h3>
-          <s class="old-price">ksh 420,000.00</s>
-          <div class="buttons-container">
-            <button class="add-to-cart">Add to cart</button>
-            <button class="quick-overview">Quick overview</button>
-          </div>
-        </div>
-        <div class="product">
-          <div class="saved-amount">saved Ksh 129,500.00</div>
-          <img
-            src="https://laptopclinic.co.ke/cdn/shop/files/UX8406_IN_STOCK.png"
-            alt="product"
-          />
-          <p class="product-name">ASUS Zenbook Duo UX8406CA-PZ005W</p>
-          <div class="ratings">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
-          </div>
-          <h3 class="product-price">Ksh 290,500.00</h3>
-          <s class="old-price">ksh 420,000.00</s>
-          <div class="buttons-container">
-            <button class="add-to-cart">Add to cart</button>
-            <button class="quick-overview">Quick overview</button>
-          </div>
-        </div>
-      </div>
+      <div class="products-container"></div>
     </section>
 
     <!-- Offer section -->
@@ -123,12 +59,12 @@
       <div class="offer-content">
         <h2>Get 50% Discount</h2>
         <p>Limited time offer. Don't miss out!</p>
-        <a href="#">Shop now!</a>
+        <a href="#products-section">Shop now!</a>
       </div>
     </section>
 
     <!-- About us section -->
-    <section class="about-us">
+    <section class="about-us" id="about-section">
       <div class="row">
         <div class="col-1">
           <h2>Power at the center of performance.</h2>
@@ -199,6 +135,43 @@
       </div>
     </section>
 
+    <!-- Contact us section -->
+    <div class="contactus" id="contactus-section">
+      <h3>Contact us</h3>
+      <form action="" method="post">
+        <div class="inputs-container">
+          <label for="user-name">User name</label>
+          <input
+            type="text"
+            name="user_name"
+            id="user-name"
+            placeholder="Enter your name..."
+            required
+          />
+        </div>
+        <div class="inputs-container">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email..."
+            required
+          />
+        </div>
+        <div class="inputs-container">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Enter your message here..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
     <!-- Newsletter section -->
     <section class="newsletter">
       <div class="row">
@@ -229,9 +202,9 @@
         <div class="card quick-links">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#products-section">Shop</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#contactus-section">Contact Us</a></li>
           </ul>
         </div>
         <div class="card">

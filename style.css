@@ -124,83 +124,80 @@ nav ul li a:hover {
   padding: 20px;
 }
 
-.products-container .product{
+.products-container .product {
   padding: 10px;
   width: 250px;
-  color:var(--text-primary);
+  color: var(--text-primary);
   border-radius: 10px;
   border: 1px solid var(--border-color);
-  background-color:var(--bg-card);
+  background-color: var(--bg-card);
 }
 
-.products-container .product img{
+.products-container .product img {
   margin: 0 auto;
   width: 100%;
 }
-.products-container .product .saved-amount{
+.products-container .product .saved-amount {
   position: absolute;
   width: 170px;
   padding: 3px;
   margin-bottom: 5px;
   text-align: center;
   color: var(--text-primary);
-  background-color:#00a600;
+  background-color: #00a600;
 }
-.product .product-name{
+.product .product-name {
   text-align: center;
   color: var(--text-muted);
 }
-.product .ratings{
+.product .ratings {
   text-align: center;
 }
-.product .ratings i{
+.product .ratings i {
   font-size: 12px;
 }
 
-.product .ratings .fa-solid{
+.product .ratings .fa-solid {
   color: #ffca2b;
 }
-.product .product-price{
+.product .product-price {
   text-align: center;
   font-size: 18px;
   color: var(--accent);
 }
-.product .old-price{
+.product .old-price {
   display: block;
   text-align: center;
   color: var(--text-muted);
 }
-.product .buttons-container{
+.product .buttons-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 10px;
 }
-.product .buttons-container button{
+.product .buttons-container button {
   padding: 10px;
   width: 100%;
   cursor: pointer;
   outline: none;
   font-size: 17px;
 }
-.buttons-container .add-to-cart{
+.buttons-container .add-to-cart {
   border: none;
   color: var(--text-primary);
   background: var(--accent-hover);
-  transition: all .1s;
+  transition: all 0.1s;
 }
-.buttons-container .add-to-cart:hover{
+.buttons-container .add-to-cart:hover {
   background: var(--accent-hover);
 }
 
-.buttons-container .quick-overview{
+.buttons-container .quick-overview {
   color: var(--text-primary);
   background: none;
   border: 1px solid var(--border-color);
 }
-
-
-
 
 /* Offer section */
 .offer-section {
@@ -317,6 +314,89 @@ nav ul li a:hover {
   color: var(--text-muted);
   font-size: 16px;
   font-style: italic;
+}
+
+/* contact us section */
+.contactus {
+  padding: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+.contactus h3 {
+  text-align: center;
+  font-size: 25px;
+  color: var(--text-primary);
+}
+
+.contactus form {
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+.contactus form .inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.contactus form .inputs-container label {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: var(--text-muted);
+}
+.contactus form .inputs-container input {
+  width: 90%;
+  padding: 10px;
+  outline: none;
+  border-radius: 20px;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  transition: all 0.3s;
+}
+.contactus form .inputs-container input:hover {
+  border: 1px solid var(--accent);
+}
+
+.contactus form .inputs-container input::placeholder {
+  color: var(--text-secondary);
+}
+.contactus form .inputs-container textarea {
+  width: 90%;
+  height: 100px;
+  resize: none;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  border-radius: 5px;
+  outline: none;
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+.contactus form .inputs-container textarea:hover {
+  border: 1px solid var(--accent);
+}
+
+.contactus form .inputs-container textarea::placeholder {
+  padding: 10px;
+  font-family: sans-serif;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.contactus form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  color: var(--text-primary);
+  background: var(--accent);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contactus form button:hover {
+  background: var(--accent-hover);
 }
 
 /* Newsletter */
