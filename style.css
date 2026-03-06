@@ -526,12 +526,12 @@ nav ul li a:hover {
   color: var(--text-muted);
 }
 .cart-container-01 .cart{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 10px;
 }
  .cart .cart-item{
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -549,7 +549,7 @@ nav ul li a:hover {
   color: var(--text-primary);
  }
  .cart-item-info .quantity-controls{
-  height: 30px;
+  height: 40px;
   width: 70%;
   display: flex;
   align-items: center;
@@ -558,8 +558,9 @@ nav ul li a:hover {
  }
  .cart-item-info .quantity-controls button{
   height: 100%;
-  width: 40%;
+  width: 50%;
   border: 0;
+  padding: 10px;
   outline: none;
   font-size: 16px;
   background: none;
