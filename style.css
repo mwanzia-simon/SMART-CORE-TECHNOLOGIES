@@ -542,7 +542,7 @@ nav ul li a:hover {
 }
  
  .cart .cart-item .cart-item-info h3{
-  font-size: 16px;
+  font-size: 12px;
  }
  .cart .cart-item .cart-item-info p{
   font-size: 18px;
@@ -575,7 +575,7 @@ nav ul li a:hover {
 
 
 .cart-container-01 .cart .cart-item img{
-  width: 40%;
+  width: 30%;
   height: 100px;
   object-fit: contain;
 }
