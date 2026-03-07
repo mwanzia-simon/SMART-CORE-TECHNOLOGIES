@@ -53,9 +53,8 @@ async function loadProducts() {
       const id = e.target.dataset.id;
       // const itemExists = items.find((item)=>item.productID === id)
       const item = data.find((item) => item.productID === id);
-      console.log(items)
       items.push(item);
-      alert("Item added succesifully to cart!")
+      alert("Item added succesifully to cart!");
       saveCartItems(items);
     });
   });
