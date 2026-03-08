@@ -110,6 +110,7 @@ async function loadProducts() {
             <li><strong>Storage</strong> ${item.specs.storage}</li>
             <li><strong>Operating System</strong> ${item.specs.operating_system}</li>
           </ul>
+          <h3> <span><p><s>Ksh ${(item.currentPrice + item.savedAmount).toLocaleString()}.00</s></p></span> Ksh ${item.currentPrice.toLocaleString()}.00</h3>
         </div>
       </div>
       `;

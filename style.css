@@ -516,21 +516,21 @@ nav ul li a:hover {
 }
 
 /* Style for cart.html */
-.cart-container-01{
+.cart-container-01 {
   padding: 10px;
   margin-top: 50px;
 }
-.cart-container-01 h3{
+.cart-container-01 h3 {
   font-size: 22px;
   text-align: center;
   color: var(--text-muted);
 }
-.cart-container-01 .cart{
+.cart-container-01 .cart {
   width: 90%;
   margin: 0 auto;
   padding: 10px;
 }
- .cart .cart-item{
+.cart .cart-item {
   width: 100%;
   display: flex;
   align-items: center;
@@ -538,25 +538,24 @@ nav ul li a:hover {
   margin-top: 10px;
   margin: 0 auto;
   justify-content: space-between;
-
 }
- 
- .cart .cart-item .cart-item-info h3{
+
+.cart .cart-item .cart-item-info h3 {
   font-size: 12px;
- }
- .cart .cart-item .cart-item-info p{
+}
+.cart .cart-item .cart-item-info p {
   font-size: 18px;
   color: var(--text-primary);
- }
- .cart-item-info .quantity-controls{
+}
+.cart-item-info .quantity-controls {
   height: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid var(--border-color);
- }
- .cart-item-info .quantity-controls button{
+}
+.cart-item-info .quantity-controls button {
   height: 100%;
   width: 50%;
   border: 0;
@@ -566,20 +565,18 @@ nav ul li a:hover {
   background: none;
   cursor: pointer;
   color: var(--text-muted);
- }
- .cart-item .remove-cart-item{
+}
+.cart-item .remove-cart-item {
   padding: 10px;
   cursor: pointer;
   color: var(--text-muted);
- }
+}
 
-
-.cart-container-01 .cart .cart-item img{
+.cart-container-01 .cart .cart-item img {
   width: 30%;
   height: 100px;
   object-fit: contain;
 }
-
 
 /* Footer */
 footer {
@@ -681,32 +678,29 @@ footer .row .quick-links ul a {
 }
 
 /* dialog */
-dialog{
-padding: 10px;
-outline: none;
-background: var(--bg-card);
-border: 1px solid var(--border-color);
-border-radius: 10px;
+dialog {
+  padding: 10px;
+  outline: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
 }
-dialog img{
-  width: 60%;
-  object-fit: contain;
-}
-dialog h3{
+
+dialog h3 {
   color: var(--text-primary);
 }
-dialog p{
+dialog p {
   color: var(--accent);
 }
 
 dialog ul li {
-  list-style-type:square;
+  list-style-type: square;
   color: var(--text-secondary);
 }
-dialog ul li strong{
-color: var(--text-muted);
+dialog ul li strong {
+  color: var(--text-muted);
 }
-dialog .close-dialog{
+dialog .close-dialog {
   height: 40px;
   width: 40px;
   display: flex;
@@ -722,4 +716,14 @@ dialog .close-dialog{
   top: 20px;
   cursor: pointer;
 }
-
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+dialog .col-1 img {
+  width: 200px;
+  height: 200px;
+  padding: 50px 0;
+  margin: 0 auto;
+  object-fit: contain;
+}
