@@ -1,7 +1,20 @@
 const productsContainer = document.querySelector(".products-container");
+const quickOverViewDialog = document.querySelector("#quick-overview");
+const closeDialogBtn = document.querySelector(".close-dialog");
 const PRODUCT_FILE = "products.json";
 
 loadProducts();
+
+//Helper functions for dialog
+function displayDialog(dialog) {
+  dialog.showModal();
+}
+
+function hideDialog(dialog) {
+  dialog.close();
+}
+
+// displayDialog(quickOverViewDialog);
 
 //Local storage helper functions
 function saveCartItems(items) {
@@ -40,22 +53,70 @@ async function loadProducts() {
           <s class="old-price">ksh ${(product.currentPrice + product.savedAmount).toLocaleString()}.00</s>
           <div class="buttons-container">
             <button class="add-to-cart" data-id="${product.productID}">Add to cart</button>
-            <button class="quick-overview">Quick overview</button>
+            <button class="quick-overview" data-id="${product.productID}">Quick overview</button>
           </div>
         </div>
         
         `;
   });
 
+  //Adding an event listener to add to cart button
   document.querySelectorAll(".add-to-cart").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const items = loadCartItems();
       const id = e.target.dataset.id;
-      // const itemExists = items.find((item)=>item.productID === id)
+
+      const itemExists = items.find((item) => item.productID === id);
+
       const item = data.find((item) => item.productID === id);
+
       items.push(item);
-      alert("Item added succesifully to cart!");
+      console.log(itemExists);
+      // alert("Item added succesifully to cart!");
       saveCartItems(items);
+    });
+  });
+
+  //the quick overview button
+  document.querySelectorAll(".quick-overview").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const id = e.target.dataset.id;
+      const item = data.find((item) => item.productID === id);
+
+      //Display quick overview dialog
+      displayDialog(quickOverViewDialog);
+
+      // changing the dialog content
+      quickOverViewDialog.innerHTML = `
+         <div class="close-dialog">
+        <i class="fa-solid fa-x"></i>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <h3>Quick overview</h3>
+          <img src="${item.imageURL}" alt="img" />
+        </div>
+        <div class="col-1">
+          <h3>Laptop Specifications</h3>
+          <p class="laptop-name">${item.productName}</p>
+          <ul>
+            <li><strong>Processor</strong> ${item.specs.processor}</li>
+            <li><strong>AI Processor</strong> ${item.specs.ai_processor}</li>
+            <li><strong>Graphics</strong> ${item.specs.graphics}</li>
+            <li>
+              <strong>Display</strong> ${item.specs.display}
+            </li>
+            <li><strong>RAM</strong> ${item.specs.ram}</li>
+            <li><strong>Storage</strong> ${item.specs.storage}</li>
+            <li><strong>Operating System</strong> ${item.specs.operating_system}</li>
+          </ul>
+        </div>
+      </div>
+      `;
+
+      document.querySelector(".close-dialog").addEventListener("click", () => {
+        hideDialog(quickOverViewDialog);
+      });
     });
   });
 }
