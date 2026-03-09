@@ -8,6 +8,8 @@ const PRODUCT_FILE = "products.json";
 loadProducts();
 updateNumberOfCartItems();
 
+
+
 // Function to display an alert box
 function displayAlert(title, message) {
   const alertBox = document.querySelector(".alert");

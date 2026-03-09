@@ -1,6 +1,11 @@
 const cart = document.querySelector(".cart");
 displayCartItems();
 const numberOfCartItems = document.querySelector("#number-of-items");
+const totalMoney = document.querySelector(".total-money");
+const payOutBtn = document.querySelector(".pay-out-btn");
+
+//Calling the update the amount of money on page load
+updateTotalMoney();
 
 // Function to display an alert box
 function displayAlert(title, message) {
@@ -13,6 +18,16 @@ function displayAlert(title, message) {
   setTimeout(() => {
     alertBox.classList.remove("active");
   }, 2000);
+}
+
+//Function to udate the amount of money
+function updateTotalMoney() {
+  const items = loadCartItems();
+  const totalPrice = items.reduce((total, product) => {
+    return total + product.currentPrice;
+  }, 0); //Starting amount inorder to increment
+
+  totalMoney.textContent = `Total: Ksh ${totalPrice.toLocaleString()}.00`;
 }
 
 //function to update the number of cart items
@@ -40,11 +55,6 @@ function displayCartItems() {
             <div class="cart-item-info">
               <h3 class="cart-item-name">${item.productName}</h3>
               <p class="cart-item-price">ksh ${item.currentPrice.toLocaleString()}.00</p>
-              <div class="quantity-controls">
-                <button class="decrement" data-id="${item.productID}">-</button>
-                <p class="cart-item-quantity">1</p>
-                <button class="increment" data-id="${item.productID}">+</button>
-              </div>
             </div>
             <div class="remove-cart-item" >
               <i class="fa-solid fa-trash" data-id="${item.productID}"></i>
@@ -69,6 +79,9 @@ function displayCartItems() {
 
       //Updating the number of cart item
       updateNumberOfCartItems();
+
+      //Updating the total amount of money
+      updateTotalMoney();
 
       //Delete the element from the DOM
       e.target.parentElement.parentElement.remove();
