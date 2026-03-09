@@ -2,13 +2,11 @@ const productsContainer = document.querySelector(".products-container");
 const quickOverViewDialog = document.querySelector("#quick-overview");
 const closeDialogBtn = document.querySelector(".close-dialog");
 const numberOfCartItems = document.querySelector("#number-of-items");
-
+const contactForm = document.querySelector("#contact-form");
 const PRODUCT_FILE = "products.json";
 
 loadProducts();
 updateNumberOfCartItems();
-
-
 
 // Function to display an alert box
 function displayAlert(title, message) {
@@ -145,3 +143,32 @@ async function loadProducts() {
     });
   });
 }
+
+// Sending emails through form spree
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const URL = "https://formspree.io/f/xbdzjrbz";
+
+  try {
+    const formData = new FormData(contactForm);
+    const response = await fetch(URL, {
+      method: "post",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+    if (response.ok) {
+      displayAlert("CONTACT US FORM!", "Submission send succesifully!");
+      contactForm.reset();
+    } else {
+      displayAlert(
+        "SUBMISSION ERROR!",
+        "An error occured while sending your submission!",
+      );
+    }
+  } catch (error) {
+    displayAlert(
+      "NETWORK ERROR!",
+      "Please check your internet connection and try again!",
+    );
+  }
+});
