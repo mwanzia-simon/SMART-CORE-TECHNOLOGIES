@@ -93,3 +93,8 @@ cart.addEventListener("click", (e) => {
   updateTotalMoney();
   displayCartItems();
 });
+
+//Redirecting the user to the checkout page
+payOutBtn.addEventListener("click", () => {
+  window.location.href = "checkout.html";
+});

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartCore | Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo-container">
+          <h2>SmartCore</h2>
+        </div>
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" id="overlay"></label>
+        <nav>
+          <ul>
+            <label for="sidebar-active">
+              <i class="fa-solid fa-x"></i>
+            </label>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products-section">Shop</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="index.html#contactus-section">Contact Us</a></li>
+            <li>
+              <div class="cart-container" onclick="location.href = 'cart.html'">
+                <p id="number-of-items">0</p>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <label for="sidebar-active">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </label>
+      </div>
+    </div>
+
+    <!-- main page -->
+
+
+    <!-- Footer -->
+      <footer>
+      <div class="row">
+        <div class="card">
+          <h3>Smart Core</h3>
+          <p>Where Power Meets Precision.</p>
+        </div>
+        <div class="card quick-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products-section">Shop</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="index.html#contactus-section">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>contact</h3>
+          <p>Tell: +1(345)-567-678</p>
+          <p>Email: smartcoretechnologies@gmail.com</p>
+          <p>Location: Nairobi, Kenya</p>
+        </div>
+      </div>
+      <hr />
+      <p>&copy; SmartCore 2026 - All Rights Reserved.</p>
+    </footer>
+    <script src="JS/checkout.js"></script>
+  </body>
+</html>
