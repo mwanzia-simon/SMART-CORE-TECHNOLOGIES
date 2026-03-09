@@ -1,9 +1,29 @@
 const productsContainer = document.querySelector(".products-container");
 const quickOverViewDialog = document.querySelector("#quick-overview");
 const closeDialogBtn = document.querySelector(".close-dialog");
+const numberOfCartItems = document.querySelector("#number-of-items");
+
 const PRODUCT_FILE = "products.json";
 
 loadProducts();
+updateNumberOfCartItems();
+
+// Function to display an alert box
+function displayAlert(title, message) {
+  const alertBox = document.querySelector(".alert");
+  const alertTitle = document.querySelector("#alert-title");
+  const alertMessage = document.querySelector("#alert-message");
+  alertTitle.textContent = title;
+  alertMessage.textContent = message;
+  alertBox.classList.add("active");
+  setTimeout(() => {
+    alertBox.classList.remove("active");
+  }, 2000);
+}
+
+function updateNumberOfCartItems() {
+  numberOfCartItems.textContent = loadCartItems().length;
+}
 
 //Helper functions for dialog
 function displayDialog(dialog) {
@@ -72,8 +92,10 @@ async function loadProducts() {
 
       items.push(item);
       console.log(itemExists);
-      // alert("Item added succesifully to cart!");
+      displayAlert("ITEM ADDED TO CART!", "Item added to cart succesifully!");
       saveCartItems(items);
+      //Updating the number of cart item
+      updateNumberOfCartItems();
     });
   });
 

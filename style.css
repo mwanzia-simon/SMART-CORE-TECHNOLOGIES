@@ -577,6 +577,28 @@ nav ul li a:hover {
   height: 100px;
   object-fit: contain;
 }
+.cart-container-01 .cashout {
+  padding: 10px;
+}
+.cart-container-01 .cashout button {
+  padding: 10px;
+  border: 0;
+  background: var(--accent);
+  color: var(--text-primary);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cart-container-01 .cashout button:hover {
+  background: var(--accent-hover);
+}
+
+.cart-container-01 .cashout p {
+  font-weight: 800;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: var(--text-muted);
+}
 
 /* Footer */
 footer {
@@ -716,14 +738,50 @@ dialog .close-dialog {
   top: 20px;
   cursor: pointer;
 }
+
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
 }
+
 dialog .col-1 img {
   width: 200px;
   height: 200px;
   padding: 50px 0;
   margin: 0 auto;
   object-fit: contain;
+}
+
+/* Styling the alert box  */
+.alert {
+  padding: 10px;
+  position: fixed;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  top: 15px;
+  right: -1000px;
+  scale: 0;
+  transition: all 0.2s ease-in-out;
+}
+.alert i {
+  font-size: 40px;
+}
+.alert h3 {
+  font-size: 15px;
+}
+.alert p {
+  font-size: 15px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.active {
+  right: 15px;
+  scale: 1;
 }

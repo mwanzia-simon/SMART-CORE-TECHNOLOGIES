@@ -1,8 +1,29 @@
 const cart = document.querySelector(".cart");
 displayCartItems();
+const numberOfCartItems = document.querySelector("#number-of-items");
+
+// Function to display an alert box
+function displayAlert(title, message) {
+  const alertBox = document.querySelector(".alert");
+  const alertTitle = document.querySelector("#alert-title");
+  const alertMessage = document.querySelector("#alert-message");
+  alertTitle.textContent = title;
+  alertMessage.textContent = message;
+  alertBox.classList.add("active");
+  setTimeout(() => {
+    alertBox.classList.remove("active");
+  }, 2000);
+}
+
+//function to update the number of cart items
+updateNumberOfCartItems();
 
 function loadCartItems() {
   return JSON.parse(localStorage.getItem("CART-ITEMS") || "[]");
+}
+
+function updateNumberOfCartItems() {
+  numberOfCartItems.textContent = loadCartItems().length;
 }
 
 function saveCartItems(items) {
@@ -40,6 +61,15 @@ function displayCartItems() {
 
       //Function to save items to local storage
       saveCartItems(items);
+
+      displayAlert(
+        "ITEM REMOVED FROM CART!",
+        "Item removed from cart succesifully!",
+      );
+
+      //Updating the number of cart item
+      updateNumberOfCartItems();
+
       //Delete the element from the DOM
       e.target.parentElement.parentElement.remove();
     });

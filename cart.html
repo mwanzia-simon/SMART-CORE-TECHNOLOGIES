@@ -12,6 +12,15 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   </head>
   <body>
+    <!-- creating an alert box -->
+    <div class="alert">
+      <i class="fa-solid fa-circle-info"></i>
+      <div class="alert-info">
+        <h3 id="alert-title">ITEM ADDED TO CART!</h3>
+        <p id="alert-message">The item was added succesifully in the cart!</p>
+      </div>
+    </div>
+
     <div class="container">
       <div class="navbar">
         <div class="logo-container">
@@ -46,10 +55,38 @@
       <div class="cart-container-01">
         <h3>Your Cart</h3>
         <div class="cart"></div>
+        <div class="cashout">
+          <p class="total-money">Total: Ksh 18,000.00</p>
+          <button class="cash-out-btn">Proceed to checkout</button>
         </div>
-        
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="card">
+          <h3>Smart Core</h3>
+          <p>Where Power Meets Precision.</p>
+        </div>
+        <div class="card quick-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products-section">Shop</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="index.html#contactus-section">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>contact</h3>
+          <p>Tell: +1(345)-567-678</p>
+          <p>Email: smartcoretechnologies@gmail.com</p>
+          <p>Location: Nairobi, Kenya</p>
+        </div>
+      </div>
+      <hr />
+      <p>&copy; SmartCore 2026 - All Rights Reserved.</p>
+    </footer>
     <script src="JS/cart.js"></script>
   </body>
 </html>
