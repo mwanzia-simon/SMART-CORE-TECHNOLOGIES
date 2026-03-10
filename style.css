@@ -905,12 +905,14 @@ dialog .col-1 img {
 }
 .receipt-info p {
   color: var(--text-secondary);
+  font-size: 14px;
 }
 
 .receipt-table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
+  font-size: 12px;
 }
 
 .receipt-table th,
@@ -924,6 +926,8 @@ dialog .col-1 img {
 .receipt-total {
   margin-top: 20px;
   text-align: right;
+  margin-right: 20px;
+  font-size: 12px;
 }
 .receipt-total p {
   color: var(--text-secondary);
@@ -935,39 +939,36 @@ dialog .col-1 img {
   margin-top: 25px;
   text-align: center;
 }
-.receipt-footer  p{
-  font-size: 12px;
+.receipt-footer p {
+  font-size: 10px;
   color: var(--text-muted);
 }
-.receipt-dialog #download{
-  padding: 10px;
+.receipt-dialog #download {
+  padding: 5px;
   border: none;
   outline: none;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 12px;
   background: var(--accent);
   color: var(--text-primary);
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.receipt-dialog #download:hover{
+.receipt-dialog #download:hover {
   background: var(--accent-hover);
 }
-.receipt-dialog #complete-order{
-  padding: 10px;
+.receipt-dialog #complete-order {
+  padding: 5px;
   border: none;
   outline: none;
   border-radius: 5px;
-  font-size: 15px;
+  font-size: 12px;
   background: var(--accent);
   color: var(--text-primary);
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
   margin-left: 10px;
 }
-.receipt-dialog #complete-order:hover{
+.receipt-dialog #complete-order:hover {
   background: var(--accent-hover);
 }
-
-
-
