@@ -876,11 +876,9 @@ dialog .col-1 img {
 /* Styling the receipt */
 
 .receipt {
-  width: 500px;
-  background: var(--bg-card);
+  width: 90%;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 .receipt .receipt-header h2 {
   color: var(--text-secondary);
