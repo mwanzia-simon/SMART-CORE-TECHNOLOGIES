@@ -47,51 +47,11 @@
     <!-- Final dialog -->
     <dialog class="receipt-dialog">
       <div class="close-btn"><i class="fa-solid fa-x"></i></div>
-      <div class="receipt" id="receipt">
-        <div class="receipt-header">
-          <h2>Smart Core Technologies</h2>
-          <p>Order Confirmation</p>
-        </div>
+      <div class="receipt" id="receipt"></div>
 
-        <div class="receipt-info">
-          <p><strong>Order ID:</strong> SC-20260308-0001</p>
-          <p><strong>Date:</strong> 08 March 2026</p>
-          <p><strong>Customer:</strong> Simon</p>
-          <p><strong>Status:</strong> Pending Payment</p>
-        </div>
-
-        <table class="receipt-table">
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Qty</th>
-              <th>Price</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>HP Spectre x360</td>
-              <td>1</td>
-              <td>KSh 165,000</td>
-              <td>KSh 165,000</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="receipt-total">
-          <p>Subtotal: <span>KSh 165,000</span></p>
-          <p>Delivery: <span>KSh 500</span></p>
-          <h3>Total: <span>KSh 165,500</span></h3>
-        </div>
-
-        <div class="receipt-footer">
-          <p>Thank you for shopping with Smart Core Technologies</p>
-        </div>
-      </div>
-
-      <button id="download"><i class="fa-solid fa-download"></i> Download receipt</button>
+      <button id="download">
+        <i class="fa-solid fa-download"></i> Download receipt
+      </button>
       <button id="complete-order">Complete order &rarr;</button>
     </dialog>
 
@@ -100,21 +60,8 @@
         <!-- Order summary -->
         <div class="order-summary">
           <h3><i class="fa-solid fa-cart-shopping"></i> Order Summary</h3>
-          <div class="order-summary-content">
-            <div class="order">
-              <p>ASUS Zenbook Duo (2025)</p>
-              <p>ksh 29,050.00</p>
-            </div>
-            <div class="order">
-              <p>ASUS Zenbook Duo (2025)</p>
-              <p>ksh 29,050.00</p>
-            </div>
-            <div class="order">
-              <p>ASUS Zenbook Duo (2025)</p>
-              <p>ksh 29,050.00</p>
-            </div>
-          </div>
-          <h4>Total: ksh 29,000.00</h4>
+          <div class="order-summary-content"></div>
+          <h4 id="total-order-money">Total: ksh 29,000.00</h4>
         </div>
       </div>
       <div class="col-1">

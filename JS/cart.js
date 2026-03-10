@@ -96,5 +96,10 @@ cart.addEventListener("click", (e) => {
 
 //Redirecting the user to the checkout page
 payOutBtn.addEventListener("click", () => {
+  const items = loadCartItems();
+  if (items.length <= 0) {
+    displayAlert("CART EMPTY!", "Your cart is empty!");
+    return;
+  }
   window.location.href = "checkout.html";
 });
