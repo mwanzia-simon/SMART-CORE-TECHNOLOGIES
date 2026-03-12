@@ -10,7 +10,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -47,7 +46,12 @@
     <!-- Final dialog -->
     <dialog class="receipt-dialog">
       <div class="close-btn"><i class="fa-solid fa-x"></i></div>
-      <div class="receipt" id="receipt"></div>
+      <div class="receipt" id="receipt">
+        <div class="receipt-info">
+          <i class="fa-solid fa-file"></i>
+          <p>smartCore_receipt.pdf</p>
+        </div>
+      </div>
 
       <button id="download">
         <i class="fa-solid fa-download"></i> Download receipt
@@ -118,6 +122,8 @@
       <hr />
       <p>&copy; SmartCore 2026 - All Rights Reserved.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script src="JS/checkout.js"></script>
   </body>
 </html>

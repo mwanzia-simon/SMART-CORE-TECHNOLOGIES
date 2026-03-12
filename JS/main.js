@@ -91,7 +91,6 @@ async function loadProducts() {
       const item = data.find((item) => item.productID === id);
 
       items.push(item);
-      console.log(itemExists);
       displayAlert("ITEM ADDED TO CART!", "Item added to cart succesifully!");
       saveCartItems(items);
       //Updating the number of cart item

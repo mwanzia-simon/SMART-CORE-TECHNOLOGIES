@@ -856,6 +856,9 @@ dialog .col-1 img {
 .personal-info-form button:hover {
   background: var(--accent-hover);
 }
+.receipt-dialog{
+  background: var(--bg-card);
+}
 
 .receipt-dialog .close-btn {
   height: 25px;
@@ -876,70 +879,30 @@ dialog .col-1 img {
 /* Styling the receipt */
 
 .receipt {
-  width: 90%;
+  width: 200px;
+  height: 200px;
   padding: 15px;
+  background:var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.receipt .receipt-header h2 {
-  color: var(--text-secondary);
-}
-.receipt .receipt-header p {
-  color: var(--text-muted);
-}
-
-.receipt-header {
-  text-align: center;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 10px;
+.receipt .receipt-info{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.receipt-header h2 {
-  margin: 0;
+.receipt .receipt-info i{
+  font-size: 60px;
+  color: var(--text-primary);
+}
+.receipt .receipt-info p{
+color: var(--text-muted);
 }
 
-.receipt-info {
-  margin-top: 15px;
-  line-height: 1.6;
-}
-.receipt-info p {
-  color: var(--text-secondary);
-  font-size: 14px;
-}
 
-.receipt-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-  font-size: 12px;
-}
-
-.receipt-table th,
-.receipt-table td {
-  padding: 10px;
-  border-bottom: 1px solid var(--border-color);
-  text-align: left;
-  color: var(--text-secondary);
-}
-
-.receipt-total {
-  margin-top: 20px;
-  text-align: right;
-  margin-right: 20px;
-  font-size: 12px;
-}
-.receipt-total p {
-  color: var(--text-secondary);
-}
-.receipt-total span {
-  font-weight: bold;
-}
-.receipt-footer {
-  margin-top: 25px;
-  text-align: center;
-}
-.receipt-footer p {
-  font-size: 10px;
-  color: var(--text-muted);
-}
 .receipt-dialog #download {
   padding: 5px;
   border: none;
