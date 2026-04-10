@@ -29,6 +29,7 @@ body {
   position: relative;
 }
 
+
 /* whatapp bubble */
 .whatapp {
   height: 45px;
@@ -76,6 +77,21 @@ body {
   border: 1px solid var(--border-color);
   box-shadow: 0px 0px 1px 0px;
 }
+.loginBtn{
+  position: absolute;
+  right: 20px;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color:var(--accent-hover);
+}
+.loginBtn:active{
+  opacity: .6;
+}
+
 .navbar input {
   display: none;
 }
@@ -150,7 +166,7 @@ nav ul li a:hover {
   text-align: center;
   background:
     linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
-    url("images/hero.jpg");
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(4px);
@@ -933,3 +949,44 @@ color: var(--text-muted);
 .receipt-dialog #complete-order:hover {
   background: var(--accent-hover);
 }
+
+
+/* Login form */
+.login-form{
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color:var(--bg-card);
+}
+.login-form hr{
+  border: none;
+  height: 1px;
+  background: var(--border-color);
+}
+.login-form .form-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-form .inputs{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-form .inputs input{
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 4px;
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+.login-form a{
+  margin-top: 10px;
+}
+.login-form button{
+  margin: 20px 0px;
+  padding: 10px 20px;
+}
+
+

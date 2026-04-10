@@ -3,10 +3,17 @@ const quickOverViewDialog = document.querySelector("#quick-overview");
 const closeDialogBtn = document.querySelector(".close-dialog");
 const numberOfCartItems = document.querySelector("#number-of-items");
 const contactForm = document.querySelector("#contact-form");
+const loginBtn = document.querySelector(".loginBtn")
 const PRODUCT_FILE = "products.json";
 
 loadProducts();
 updateNumberOfCartItems();
+
+
+// Function to login
+loginBtn.addEventListener("click",()=>{
+  window.location.href ="../login.html"
+})
 
 // Function to display an alert box
 function displayAlert(title, message) {
