@@ -16,8 +16,8 @@
     <div class="alert">
       <i class="fa-solid fa-circle-info"></i>
       <div class="alert-info">
-        <h3 id="alert-title">ITEM ADDED TO CART!</h3>
-        <p id="alert-message">The item was added succesifully in the cart!</p>
+        <h3 id="alert-title"></h3>
+        <p id="alert-message"></p>
       </div>
     </div>
 
@@ -33,9 +33,9 @@
           <h2>SmartCore</h2>
         </div>
 
-          <button class="loginBtn">Login</button>
-          <input type="checkbox" id="sidebar-active" placeholder="." />
-          <label for="sidebar-active" id="overlay"></label>
+        <button class="loginBtn"><i class="fa-solid fa-user"></i></button>
+        <input type="checkbox" id="sidebar-active" placeholder="." />
+        <label for="sidebar-active" id="overlay"></label>
 
         <nav>
           <ul>
@@ -83,10 +83,15 @@
     <!-- Quick overview dialog -->
     <dialog id="quick-overview"></dialog>
 
+    <!-- User profile dialog -->
+    <dialog id="user-profile">
+    
+    </dialog>
+
     <!-- Offer section -->
     <section class="offer-section">
       <div class="offer-content">
-        <h2>Get 50% Discount</h2>
+        <h2 id="offer-text">Get 50% Discount</h2>
         <p>Limited time offer. Don't miss out!</p>
         <a href="#products-section">Shop now!</a>
       </div>
@@ -214,8 +219,12 @@
             delivered straight to your email.
           </p>
           <div class="email-container">
-            <input type="email" placeholder="Enter your email here ......" />
-            <button>subscribe</button>
+            <input
+              type="email"
+              placeholder="Enter your email here ......"
+              id="newsletter-input"
+            />
+            <button id="newsletter-btn">subscribe</button>
           </div>
         </div>
       </div>
@@ -238,7 +247,7 @@
         </div>
         <div class="card">
           <h3>contact</h3>
-          <p>Tell: +1(345)-567-678</p>
+          <p>Tell: +254768286327</p>
           <p>Email: smartcoretechnologies@gmail.com</p>
           <p>Location: Nairobi, Kenya</p>
         </div>
@@ -247,6 +256,6 @@
       <p>&copy; SmartCore 2026 - All Rights Reserved.</p>
     </footer>
 
-    <script src="JS/main.js"></script>
+    <script src="JS/main.js" type="module"></script>
   </body>
 </html>

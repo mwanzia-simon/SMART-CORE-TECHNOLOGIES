@@ -51,13 +51,58 @@
         </label>
       </div>
 
-      <!-- Cart container-01 -->
-      <div class="cart-container-01">
-        <h3>Your Cart</h3>
-        <div class="cart"></div>
-        <div class="cashout">
-          <p class="total-money"></p>
-          <button class="pay-out-btn">Proceed to checkout</button>
+      <div class="row">
+        <div class="col-1">
+          <!-- Cart container-01 -->
+          <div class="cart-container-01">
+            <h3>Your Cart</h3>
+            <div class="cart"></div>
+          </div>
+        </div>
+        <div class="col-1">
+          <div class="order-summary">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Order Summary</h3>
+            <div class="order-summary-content">
+              <div class="order">
+                <p>Subtotal</p>
+                <p id="subtotal">ksh 0.00</p>
+              </div>
+              <div class="order">
+                <p>Total items</p>
+                <p id="total-items">0</p>
+              </div>
+              <div class="order">
+                <p id="discount-label">Discount (-20%)</p>
+                <p class="discount-text">ksh 0.00</p>
+              </div>
+              <div class="order">
+                <p>Delivery Fee</p>
+                <p id="delivery-fee">ksh 500.00</p>
+              </div>
+            </div>
+            <h4 id="total-order-money">Total: ksh 29,000.00</h4>
+            <div class="payment-methods">
+              <div class="method">
+                <input type="radio" name="payments" id="mpesa-payment" class="p-methods" data-method="mpesa"/>
+                <label for="mpesa-payment">Mpesa <i class="fa-brands fa-cash-app"></i></label>
+              </div>
+              <div class="mpesa-box">
+                <input
+                  type="tel"
+                  id="mpesa-number"
+                  placeholder="E.g, 0712345678"
+                />
+              </div>
+              <div class="method">
+                <input type="radio" name="payments" id="cod-payment" class="p-methods" data-method="cod"/>
+                <label for="cod-payment">Cash on delivery <i class="fa-solid fa-cart-flatbed"></i></label>
+              </div>
+            </div>
+            <div class="space"></div>
+            <div class="button-cont">
+            <button id="checkout-btn">CHECKOUT <i class="fa-solid fa-angles-right"></i></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -79,7 +124,7 @@
         </div>
         <div class="card">
           <h3>contact</h3>
-          <p>Tell: +1(345)-567-678</p>
+          <p>Tell: +254768286327</p>
           <p>Email: smartcoretechnologies@gmail.com</p>
           <p>Location: Nairobi, Kenya</p>
         </div>
@@ -87,6 +132,6 @@
       <hr />
       <p>&copy; SmartCore 2026 - All Rights Reserved.</p>
     </footer>
-    <script src="JS/cart.js"></script>
+    <script src="JS/cart.js" type="module"></script>
   </body>
 </html>

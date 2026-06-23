@@ -1,19 +1,86 @@
 const productsContainer = document.querySelector(".products-container");
 const quickOverViewDialog = document.querySelector("#quick-overview");
+const userProfileDialog = document.querySelector("#user-profile");
 const closeDialogBtn = document.querySelector(".close-dialog");
 const numberOfCartItems = document.querySelector("#number-of-items");
 const contactForm = document.querySelector("#contact-form");
-const loginBtn = document.querySelector(".loginBtn")
-const PRODUCT_FILE = "products.json";
+const loginBtn = document.querySelector(".loginBtn");
+const newsletterBtn = document.querySelector("#newsletter-btn");
+const newsletterInput = document.querySelector("#newsletter-input");
+const offerSection = document.querySelector(".offer-section");
+const offerText = document.querySelector("#offer-text");
 
-loadProducts();
-updateNumberOfCartItems();
+import {
+  getDiscount,
+  getProducts,
+  getCartItems,
+  setCartItems,
+} from "./utils.js";
 
+setUp();
+
+async function setUp() {
+  await getCartItems();
+  loadProducts();
+  updateNumberOfCartItems();
+  checkForOffer();
+}
+
+// On page load check if we have any offers if any display the offer banner
+async function checkForOffer() {
+  offerSection.style.display = "none";
+  const discount = await getDiscount();
+  if (discount > 0) {
+    setTimeout(() => {
+      displayAlert(
+        "DISCOUNT ALERT 🎉🎉",
+        `Shop now to get a ${discount}% off discount!`,
+      );
+    }, 2000);
+
+    offerText.textContent = `Get ${discount}% Discount!`;
+    offerSection.style.display = "block";
+  }
+}
 
 // Function to login
-loginBtn.addEventListener("click",()=>{
-  window.location.href ="../login.html"
-})
+loginBtn.addEventListener("click", () => {
+  const loggedUser = JSON.parse(localStorage.getItem("logged_user"));
+  if (loggedUser) {
+    userProfileDialog.innerHTML = `
+    <div class="close-user-profile">
+        <i class="fa-solid fa-x"></i>
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <h3>user profile</h3>
+          <div class="user-logo">${loggedUser.username[0].toUpperCase()}</div>
+          <h3>username</h3>
+          <span>${loggedUser.username}</span>
+          <h3>Email</h3>
+          <span>${loggedUser.email}</span>
+          <button id="logout-btn">Log out</button>
+        </div>
+      </div>
+`;
+    displayDialog(userProfileDialog);
+    document.querySelector(".close-user-profile").onclick = () => {
+      hideDialog(userProfileDialog);
+    };
+    document.querySelector("#logout-btn").onclick = () => {
+      setCartItems();
+      hideDialog(userProfileDialog);
+      displayAlert("LOG OUT ALERT", "You have succesifully logged out!");
+      localStorage.setItem("logged_user", null);
+      localStorage.setItem("cart_items", JSON.stringify([]));
+      setTimeout(() => {
+        window.location.href = "./login.html";
+      }, 3000);
+    };
+    return;
+  }
+  window.location.href = "./login.html";
+});
 
 // Function to display an alert box
 function displayAlert(title, message) {
@@ -25,7 +92,7 @@ function displayAlert(title, message) {
   alertBox.classList.add("active");
   setTimeout(() => {
     alertBox.classList.remove("active");
-  }, 2000);
+  }, 3000);
 }
 
 function updateNumberOfCartItems() {
@@ -41,20 +108,17 @@ function hideDialog(dialog) {
   dialog.close();
 }
 
-// displayDialog(quickOverViewDialog);
-
 //Local storage helper functions
 function saveCartItems(items) {
-  localStorage.setItem("CART-ITEMS", JSON.stringify(items));
+  localStorage.setItem("cart_items", JSON.stringify(items));
 }
 
 function loadCartItems() {
-  return JSON.parse(localStorage.getItem("CART-ITEMS") || "[]");
+  return JSON.parse(localStorage.getItem("cart_items") || "[]");
 }
 
 async function loadProducts() {
-  const res = await fetch(PRODUCT_FILE);
-  const data = await res.json();
+  const data = await getProducts();
 
   // Clearing the products container
   productsContainer.innerHTML = "";
@@ -79,8 +143,8 @@ async function loadProducts() {
           <h3 class="product-price">Ksh ${product.currentPrice.toLocaleString()}.00</h3>
           <s class="old-price">ksh ${(product.currentPrice + product.savedAmount).toLocaleString()}.00</s>
           <div class="buttons-container">
-            <button class="add-to-cart" data-id="${product.productID}">Add to cart</button>
-            <button class="quick-overview" data-id="${product.productID}">Quick overview</button>
+            <button class="add-to-cart" data-id="${product._id}">Add to cart</button>
+            <button class="quick-overview" data-id="${product._id}">Quick overview</button>
           </div>
         </div>
         
@@ -93,9 +157,15 @@ async function loadProducts() {
       const items = loadCartItems();
       const id = e.target.dataset.id;
 
-      const itemExists = items.find((item) => item.productID === id);
+      const itemExists = items.find((item) => item._id === id);
 
-      const item = data.find((item) => item.productID === id);
+      // If the item is already added to the cart we return
+      if (itemExists) {
+        displayAlert("CART ITEMS ALERT", "Item already added to cart!");
+        return;
+      }
+
+      const item = data.find((item) => item._id === id);
 
       items.push(item);
       displayAlert("ITEM ADDED TO CART!", "Item added to cart succesifully!");
@@ -109,7 +179,7 @@ async function loadProducts() {
   document.querySelectorAll(".quick-overview").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const id = e.target.dataset.id;
-      const item = data.find((item) => item.productID === id);
+      const item = data.find((item) => item._id === id);
 
       //Display quick overview dialog
       displayDialog(quickOverViewDialog);
@@ -178,3 +248,36 @@ contactForm.addEventListener("submit", async (e) => {
     );
   }
 });
+
+// function to subscribe to newsletter
+newsletterBtn.addEventListener("click", () => {
+  const email = newsletterInput.value;
+  if (!email.trim()) {
+    displayAlert("ALERT", "Please provide an email to subscribe!");
+    return;
+  }
+
+  let newsletterObj = {
+    email: email,
+  };
+  subscribeToNewsletter(newsletterObj);
+});
+
+async function subscribeToNewsletter(newsletterObj) {
+  const API = "http://localhost:5050/api/v1/newsletter/subscribe";
+  try {
+    const res = await fetch(API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newsletterObj),
+    });
+    const data = await res.json();
+    displayAlert("NEWSLETTER ALERT", data.message);
+    if (res.status !== 201) return;
+    newsletterInput.value = "";
+  } catch (error) {
+    console.log("An error occured", error);
+  }
+}

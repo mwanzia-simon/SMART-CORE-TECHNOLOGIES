@@ -17,7 +17,7 @@ showOrderSummary();
 updateNumberOfCartItems();
 
 function loadCartItems() {
-  return JSON.parse(localStorage.getItem("CART-ITEMS") || "[]");
+  return JSON.parse(localStorage.getItem("cart_items") || "[]");
 }
 
 //Function to get the total price
@@ -63,19 +63,58 @@ function updateNumberOfCartItems() {
 
 personalInfoForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  userObject = {
-    firstName: firstName.value,
-    whatappNumber: whatappNumber.value,
-    email: email.value,
+  // userObject = {
+  //   firstName: firstName.value,
+  //   whatappNumber: whatappNumber.value,
+  //   email: email.value,
+  // };
+
+  // displayDialog(receiptDialog);
+  submitOrder();
+});
+
+async function submitOrder() {
+  const API = "http://localhost:5050/api/v1/order/makeorder";
+  const user = JSON.parse(localStorage.getItem("logged_user"));
+  const orders = JSON.parse(localStorage.getItem("cart_items"));
+  let ordersArr = [];
+
+  if (!user || !orders) return;
+
+  orders.forEach((order) => {
+    let orderObject = {
+      productName: order.productName,
+      currentPrice: order.currentPrice,
+    };
+    ordersArr.push(orderObject);
+  });
+
+
+  const orderObj = {
+    userId: user.id,
+    userOrders: ordersArr,
   };
 
-  displayDialog(receiptDialog);
-});
+  try {
+    const res = await fetch(API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderObj),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 function generateOrderID() {
   const date = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-  const count = Number(localStorage.orderCount || 0) + 1;
-  localStorage.orderCount = count;
+  const count = Number(localStorage.order_count || 0) + 1;
+  localStorage.order_count = count;
   return `SC-${date}-${String(count).padStart(4, "0")}`;
 }
 
